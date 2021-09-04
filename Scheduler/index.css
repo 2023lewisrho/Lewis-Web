@@ -1,0 +1,56 @@
+.flexdiv {
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+}
+
+.image_sub {
+    justify-content: left;
+    color: gray;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.image_inline {
+    display: inline;
+    width: 2em;
+    height: 2em;
+}
+
+.image_responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collase;
+}
+
+tr {
+    height: 4em;
+}
+
+.table_data {
+    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+    color: black;
+    text-align: center;
+}
+
+.table_startrow {
+    text-align: left;
+    font-weight: bold;
+    color: gray;
+    vertical-align: middle;
+    padding-left: 1em;
+    margin: 0 auto;
+}

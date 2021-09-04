@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" defer></script>
+    <title>Scheduler</title>
+</head>
+<body>
+    <div class="flexdiv">
+        <div>
+            <img src="https://avatars.githubusercontent.com/u/35755164?v=4" alt="emiliacrysadge"  class="image_inline image_responsive"/>
+            <h1 class="image_inline">Lewis's Scheduler</h1>
+            <img src="https://avatars.githubusercontent.com/u/35755164?v=4" alt="emiliacrysadge"  class="image_inline image_responsive"/>
+        </div>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.noria.com%2Fsites%2FUploads%2F2019%2F6%2F19%2Ffa6043f5-e750-4adc-9cd9-86d1b14885d7_right-schedule_extra_large.jpeg&f=1&nofb=1" alt="Schedule Calander Image" class="image_responsive" />
+        <a class="image_sub" href="https://www.reliableplant.com/Read/31558/right-maintenance-schedule">Source</a>
+        <p>What is a scheduler and why is it important? In <span style="font-size: smaller;">short</span>, it helps us keep <i>organized</i>.
+        <br>
+        <span style="font-size: small; text-justify: center;">(we work 4 day weeks now. deal with it)</span>
+        </p>
+        <div style="width: 100%; overflow-x: auto;">
+            <table id="tableDisplay" style="overflow-x: auto; width: 100%;" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th style="width: 20%; text-align: left;"></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                    </tr>
+                    <tr id="time0">
+                        <td class="table_startrow">08:00AM-09:00AM</td>
+                    </tr>
+                    <tr id="time1">
+                        <td class="table_startrow">09:00AM-10:00AM</td>
+                    </tr>
+                    <tr id="time2">
+                        <td class="table_startrow">10:00AM-11:00AM</td>
+                    </tr>
+                    <tr id="time3">
+                        <td class="table_startrow">11:00AM-12:00PM</td>
+                    </tr>
+                    <tr id="time4">
+                        <td class="table_startrow">12:00PM-01:00PM</td>
+                    </tr>
+                    <tr id="time5">
+                        <td class="table_startrow">01:00PM-02:00PM</td>
+                    </tr>
+                    <tr id="time6">
+                        <td class="table_startrow">02:00PM-03:00PM</td>
+                    </tr>
+                    <tr id="time7">
+                        <td class="table_startrow">03:00PM-04:00PM</td>
+                    </tr>
+                    <tr id="time8">
+                        <td class="table_startrow">04:00AM-05:00AM</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="save_button" style="float: right; margin-top: 1em;">Save</button>
+        </div>
+        <div class="flexdiv" style="align-items: flex-start;">
+            <p style="font-size: small;">(click on an item to delete it)</p>
+            <div>
+                <label>Label: </label>
+                <input type="text" id="text_label" style="color: gray;" value="Put Some Text Here!"></input>
+            </div>
+            <div>
+                <label>Day: </label>
+                <select id="day_select">
+                    <option value="0">Monday</option>
+                    <option value="1">Tuesday</option>
+                    <option value="2">Wednesday</option>
+                    <option value="3">Thursday</option>
+                </select>
+            </div>
+            <div>
+                <label>Starting Time: </label>
+                <select id="time_select">
+                    <option value="0">08:00AM</option>
+                    <option value="1">09:00AM</option>
+                    <option value="2">10:00AM</option>
+                    <option value="3">11:00AM</option>
+                    <option value="4">12:00PM</option>
+                    <option value="5">01:00PM</option>
+                    <option value="6">02:00PM</option>
+                    <option value="7">03:00PM</option>
+                    <option value="8">04:00PM</option>
+                </select>
+            </div>
+            <div>
+                <label>For <i>n</i> hours: </label>
+                <select id="hour_select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+            </div>
+            <div>
+                <label>Colour: </label>
+                <input type="color" id="color_select" value="#e66465" />
+            </div>
+            <button id="add">Add to Schedule</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
