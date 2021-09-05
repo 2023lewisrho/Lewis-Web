@@ -27,6 +27,12 @@ function TimeSlot(label, start, length, day, colour) {
 function init() {
     
     // Initialize Time Slot Array and the Table
+    // The ID format for each of the new elements is 
+    // TIMESLOT-DAY
+    // For example, for the 10:00AM-11:00AM Wednesday 
+    // The TIMESLOT would be the third timeslot, meaning a value of 2 (we count from 0)
+    // The DAY would be the third day Wednesday, meaning a value of 2 (we count from 0)
+    // So the ID would be "2-2".
     {
         let base_string = "time"
         var array = new Array();
@@ -55,26 +61,28 @@ function init() {
 init();
 
 // This function takes a timeslot adds it to the timeArray list, and renders it onto the table. 
-// 
 function render(timeslot) {
     timeArray[timeslot.day].push(timeslot);
     for (var i = timeslot.start; i < (timeslot.start+timeslot.length); i++) {
         let element = document.getElementById(i+"-"+timeslot.day);
         if (i === timeslot.start) {
             element.innerHTML = timeslot.label.toString();
-            element.title = timeslot.label.toString() + " (click me to delete me)";
+            element.title = timeslot.label.toString() + " (click me to delete me)"; // Hover message
         }
         element.setAttribute("style", "background-color: "+timeslot.colour+";");
     }
 }
 
+// Check if the timeslots conflict. 
+// We do this by iterating over all the timeslots for a particular day
+// and checking if it contains the IDs of the elements we are trying to set as.
 function isConflicting(timeslot) {
     for (var i = 0; i < timeArray[timeslot.day].length; i++) {
         let element = timeArray[timeslot.day][i];
         for (var j = 0; j < element.id_array.length; j++) {
-            let id_elem = element.id_array[j];
             for (var k = 0; k < timeslot.id_array.length; k++) {
                 let id_timeslot = timeslot.id_array[k];
+                // check if the ID is included.
                 if (element.id_array.includes(id_timeslot)) {
                     console.log(id_timeslot);
                     return true;
@@ -85,20 +93,25 @@ function isConflicting(timeslot) {
     return false;
 }
 
+// The handler for each table data element that we generate in JS. 
 function handleOnClick(event) {
+    // We only want this logic to work if this is the root element for the timeslot, i.e. the one with the label
     if (event.explicitOriginalTarget.innerHTML !== "") {
         let src_id = event.explicitOriginalTarget.id;
         let day = Number(src_id.split("-")[1]);
         
+        // Loop over the time array to find the correct time slot.
         let timeslotObj = undefined;
         for (var i = 0; i < timeArray[day].length; i++) {
             if (timeArray[day][i].start_id == src_id) {
                 timeslotObj = timeArray[day][i];
+                // remove the time slot
                 timeArray[day].splice(i,1);
             }
         }
 
-        if (timeslotObj !== undefined) {
+        // Get the list of IDs that the time slot contains and clear them.
+        if (timeslotObj !== undefined) { // object safety
             document.getElementById(src_id).style = "";
             document.getElementById(src_id).innerHTML = "";
             timeslotObj.id_array.forEach(ids => {
@@ -148,6 +161,7 @@ TimeSelect.addEventListener("blur", function(event) {
 // Submit to table logic
 addButton.addEventListener("click", function(event) {
     let text_in = TextLabel.value;
+    // Check for valid table labels
     if (text_in == "Put Some Text Here!" || text_in == "") {
         alert("Please put a proper message for Label!");
         return;
@@ -158,14 +172,18 @@ addButton.addEventListener("click", function(event) {
     let colour = ColourSelect.value;
     
     let time_slot = new TimeSlot(text_in, starting, length, day, colour);
+    // Check conflicting
     if (isConflicting(time_slot)) {
         alert("The time select is conflicting! Please choose a different time!");
         return;
     }
+    // Render the new timeslot to the table.
     render(time_slot);
 });
 
+// Button that takes a screenshot of the table.
 saveButton.addEventListener("click", function(event) {
+    // Use an external library that renders a DOM element to a HTMLCanvas. Turn that into a PNG Data URL. Make a link, click it using JS and make the user download the file. 
     html2canvas(document.getElementById("tableDisplay"), {
         allowTaint: true,
         useCORS: true,
