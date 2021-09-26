@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Purgetory Survey</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="sol_text center text_center">Purgetory Survey</h1>
+      <h5
+        class="center text_center"
+        style="font-style: italic; margin-top: 1em">
+        Tell us what you would improve about your experiences.
+      </h5>
+      <div class="flexdiv" style="margin-top: 1em">
+        <div class="div_elem">
+          <label for="Name">Name</label>
+          <input class="textbox" value="Name" id="Name" />
+        </div>
+        <div class="div_elem">
+            <p class="sol_text">Gender</p>
+            <select class="input_other">
+                <option>Male</option>
+                <option>Female</option>
+                <option>this gender thing is very complicated</option>
+                <option>please help me i cant figure it out</option>
+                <option>what do you mean "egg" and "egg_irl moment"?</option>
+                <option>i do not relate to these memes at all 100% nope</option>
+                <option>*insert copium here*</option>
+                <option>still cis tho</option>
+            </select>
+          </div>
+        <div class="div_elem">
+          <label for="Email">Email</label>
+          <input class="textbox" value="example@example.com" id="Email" type="email"/>
+        </div>
+        <div class="div_elem">
+          <label for="Age">Age</label>
+          <input class="input_other" value="0" id="Age" type="number" />
+        </div>
+        <div class="div_elem">
+          <label for="Bugs">How many bugs did you find in your time?</label>
+          <input class="input_other" value="0" id="Bugs" type="range" min="0" step="1" max="116" />
+          <p id="selection-int"></p>
+        </div>
+        <div class="div_elem">
+          <label for="Signup">On what day did you sign up?</label>
+          <input class="input_other" id="Signup" type="date" />
+        </div>
+        <div class="div_elem">
+            <label for="Exitdate">On what day did you exit?</label>
+            <input class="input_other" id="ExitDate" type="date" />
+          </div>
+        <div class="div_elem">
+            <label for="Reason">Reason for Arrival:</label>
+            <input class="input_other" type="text" name="Reason" id="Reason">
+        </div>
+        <div class="div_elem">
+          <p>
+            Can we sell your data to advertisers and the CIA and tell your parents about all the details of the meeting?
+          </p>
+          <input
+            class="input_other"
+            id="SellData"
+            type="checkbox"
+            checked
+            value="yes"
+          />
+          <label for="SellData">Yes, sell all my data to advertisers, and tell my parents about my sessions so they totally won't abuse the information and take it away from me.</label>
+        </div>
+        <div class="div_elem">
+            <p>
+                Why are you here?
+            </p>
+            <select class="input_other">
+                <option>I thought you'd listen and not ignore me</option>
+                <option>Well too bad kekw you're getting ignored</option>
+                <option>I do be sitting in the corner of my room crying myself to sleep</option>
+                <option>What?</option>
+                <option>Shhhh... you never heard anything</option>
+                <option>All government lies</option>
+                <option>living do be pointless for me</option>
+                <option>please give up already</option>
+                <option>i'll only cause you more trouble</option>
+                <option>dont look for me, please dont call out for me</option>
+            </select>
+          </div>
+          <div class="div_elem">
+            <p>
+                Where do you want your response to end up in?
+            </p>
+            <div class="radio_opt">
+                <input type="radio" id="Response-mapo" name="response" value="Mapo Bridge">
+                <label for="Response-mapo">Mapo Bridge</label>
+            </div>
+            <div class="radio_opt">
+                <input type="radio" id="Response-ward" name="response" value="Mental Health Ward">
+                <label for="Response-ward">Mental Hospital Ward</label>
+            </div>
+            <div class="radio_opt">
+                <input type="radio" id="Response-closet" name="response" value="Closet Forever">
+                <label for=Response-closet"">The Closet</label>
+            </div>
+            <div class="radio_opt">
+                <input type="radio" id="Response-outside" name="response" value="Outside in the Rain">
+                <label for="Response-outside">Outside in the Rain</label>
+            </div>
+            <div class="radio_opt">
+                <input type="radio" id="Response-BedroomCommunity" name="response" value="Bedroom Community">
+                <label for="Response-BedroomCommunity">On a glass beach - Bedroom Community</label>
+            </div>
+          </div>
+          <div class="div_elem">
+            <label for="Improvements">Improvements to Life: </label>
+            <textarea class="input_other" name="Improvements" id="Improvements"></textarea>
+          </div>
+          <div class="div_elem">
+            <label for="Reincarnation">Reincarnation Request: </label>
+            <textarea class="input_other" name="Reincarnation" id="Reincarnation"></textarea>
+          </div>
+          <div class="div_elem">
+              <button>Submit Form to Life Advisary Commitee</button>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
