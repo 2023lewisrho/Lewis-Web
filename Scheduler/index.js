@@ -134,7 +134,7 @@ const saveButton = document.getElementById("save_button");
 // So when clicked, this will clear the text box and make the input text black.
 TextLabel.addEventListener("focus", function(event) {
     TextLabel.value = "";
-    TextLabel.style = "color: black;";
+    TextLabel.style = "";
 });
 
 // If the input value is nothing it is reverted.

@@ -1,3 +1,9 @@
+
+body {
+    background-color: #1d2021;
+    color: lightcyan;
+}
+
 .flexdiv {
     width: 50%;
     position: relative;
@@ -32,8 +38,10 @@
 }
 
 table {
-    border: 1px solid black;
+    border: 1px solid #282828;
     border-collapse: collase;
+    border-radius: 1em;
+    background-color: #282828;
 }
 
 tr {
@@ -53,4 +61,19 @@ tr {
     vertical-align: middle;
     padding-left: 1em;
     margin: 0 auto;
+}
+
+.rounded_input {
+    background-color: #504945;
+    color: #ebdbb2;
+    border: #504945;
+    border-radius: 0.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.input_div {
+    padding-top: 1em;
 }

@@ -1,0 +1,50 @@
+
+body {
+    background-color: #1d2021;
+    color: lightcyan;
+}
+
+.flexdiv {
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+}
+
+.lrflex {
+    flex-direction: row;
+}
+
+.startflex {
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.subtext {
+    color: dimgray;
+    display: inline-block;
+}
+
+.image_sub {
+    justify-content: left;
+    color: gray;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.image_responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.seperate {
+    justify-content: space-between;
+}

@@ -60,26 +60,26 @@
                     </tr>
                 </tbody>
             </table>
-            <button id="save_button" style="float: right; margin-top: 1em;">Save</button>
+            <button id="save_button" style="float: right; margin-top: 1em;" class="rounded_input">Save</button>
         </div>
         <div class="flexdiv" style="align-items: flex-start;">
             <p style="font-size: small;">(click on an item to delete it)</p>
             <div>
                 <label>Label: </label>
-                <input type="text" id="text_label" style="color: gray;" value="Put Some Text Here!"></input>
+                <input type="text" id="text_label" style="color: gray;" value="Put Some Text Here!" class="rounded_input"></input>
             </div>
-            <div>
+            <div class="input_div">
                 <label>Day: </label>
-                <select id="day_select">
+                <select id="day_select" class="rounded_input">
                     <option value="0">Monday</option>
                     <option value="1">Tuesday</option>
                     <option value="2">Wednesday</option>
                     <option value="3">Thursday</option>
                 </select>
             </div>
-            <div>
+            <div class="input_div">
                 <label>Starting Time: </label>
-                <select id="time_select">
+                <select id="time_select" class="rounded_input">
                     <option value="0">08:00AM</option>
                     <option value="1">09:00AM</option>
                     <option value="2">10:00AM</option>
@@ -91,9 +91,9 @@
                     <option value="8">04:00PM</option>
                 </select>
             </div>
-            <div>
+            <div class="input_div">
                 <label>For <i>n</i> hours: </label>
-                <select id="hour_select">
+                <select id="hour_select" class="rounded_input">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -105,11 +105,11 @@
                     <option>9</option>
                 </select>
             </div>
-            <div>
+            <div class="input_div" style="padding-bottom: 1em;">
                 <label>Colour: </label>
-                <input type="color" id="color_select" value="#e66465" />
+                <input type="color" id="color_select" value="#e66465" class="rounded_input" />
             </div>
-            <button id="add">Add to Schedule</button>
+            <button id="add" class="rounded_input">Add to Schedule</button>
         </div>
     </div>
     <script src="index.js"></script>
