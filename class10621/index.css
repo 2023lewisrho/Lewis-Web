@@ -1,0 +1,17 @@
+.fixed {
+    position: fixed;
+    top: 50px;
+    left: 23px;
+}
+
+.aaa {
+    z-index: -1;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}

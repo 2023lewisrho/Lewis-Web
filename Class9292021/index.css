@@ -1,0 +1,66 @@
+
+.penguin {
+    width: 300px;
+    height: 300px;
+}
+
+.randdd {
+    width: 100px;
+    height: 100px;
+}
+
+.compress {
+    width: 600px;
+    height: 50px;
+}
+
+.border {
+    border: 3px;
+}
+
+.brd-c-pink {
+    border-color: palevioletred;
+}
+
+.brd-c-blue {
+    border-color: paleturquoise;
+}
+.brd-c-gren {
+    border-color: palegreen;
+}
+
+.brd-c-black {
+    border-color: black;
+}
+
+.brd-dotted {
+    border-style: dotted;
+}
+
+.brd-solid {
+    border-style: solid;
+}
+
+.brd-radius {
+    border-radius: 10px;
+}
+
+.pad-t {
+    padding-top: 1em;
+}
+
+.pad-l {
+    padding-left: 1em;
+}
+
+.pad-r {
+    padding-right: 1em;
+}
+
+.pad-b {
+    padding-bottom: 1em;
+}
+
+.centerize {
+    margin: 0 auto;
+}

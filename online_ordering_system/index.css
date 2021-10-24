@@ -1,0 +1,100 @@
+/* 
+84A7CF
+42D2D5
+C6E7D2
+FBBF8A
+DB5660
+*/
+
+.lightpurple-sc {
+    background-color: #84A7CF;
+}
+
+.cyan-sc {
+    background-color: #42D2D5;
+}
+
+.melon-sc {
+    background-color: #C6E7D2;
+}
+
+.lightorange-sc {
+    background-color: #FBBF8A;
+}
+
+.tf2red-sc {
+    background-color: #DB5660;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.page-header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 0px;
+    height: 2rem;
+}
+
+.page-header > p {
+    text-align: center;
+}
+
+.flex-root {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-around;
+}
+
+
+.flex-item {
+    align-self: auto;
+    margin: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    flex-grow: 1;
+    min-width: 25vw;
+}
+
+.flex-item > img {
+    float:left;
+    padding-right: 1rem;
+    object-fit: contain;
+    max-height: 20vh;
+    width: auto;
+}
+
+.flex-item > h4 {
+    text-align: left;
+    color: black;
+    text-emphasis: none;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 00.25rem;
+    margin-bottom: 00.25rem;
+}
+
+.flex-item > p {
+    text-align: left;
+    opacity: 0.8;
+    margin-top: 00.5rem;
+}
+
+.flex-item > label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #FBBF8A;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

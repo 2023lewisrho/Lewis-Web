@@ -1,0 +1,22 @@
+.centered {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    width: 80vw;
+}
+
+.part {
+    display: inline-block;
+    min-width: 6em;
+    font-weight: bold;
+    padding: 0.08em;
+    padding-right: 00.08em;
+    margin-top: 1em;
+    background-color: white;
+    color: black;
+}

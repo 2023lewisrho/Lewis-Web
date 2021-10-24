@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.receiver {
+    flex: 1 0 auto;
+    height: auto;
+    width: 0;
+}
+
+.receiver:before {
+    content:"";
+    display: block;
+    float: right;
+    padding-top:100%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50%;
+}
