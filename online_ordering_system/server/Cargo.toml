@@ -1,0 +1,20 @@
+[package]
+name = "online_ordering_system_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lazy_static = "1.4.0"
+
+[dependencies.rocket]
+version = "0.5.0-rc.1"
+features = ["json"]
+
+[dependencies.serde]
+version = "1.0.130"
+features = ["serde_derive"]
+
+[dependencies.serde_derive]
+version = "1.0.130"
