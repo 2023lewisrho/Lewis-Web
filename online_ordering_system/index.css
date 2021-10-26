@@ -93,8 +93,7 @@ body {
     color: #FBBF8A;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.center {
+    text-align: center;
+    margin:0 auto;
 }

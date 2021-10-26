@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Ordering System</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body style="background-color: wheat;">
+    <div class="page-header tf2red-sc">
+        <p id="header">
+            Restaurants
+        </p>
+    </div>
+    <div class="flex-root" id="root_view">
+    </div>
+    <script src="index.js"></script>
+
+    <div class="center">
+        <form id="form" hidden>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value=""><br>
     
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" value=""><br>
+    
+            <label for="ccn">Credit Card Number:</label><br>
+            <input type="text" id="ccn" name="ccn" value="XXXXXXXXXXXXXXXX"><br>
+    
+            <label for="ccv">CCV:</label><br>
+            <input type="text" id="ccv" name="ccv" value="XXX"><br>
+    
+            <label for="cce">Expirey MM/YY:</label><br>
+            <input type="text" id="cce" name="cce" value="XX/XX"><br>
+    
+            <label for="tel">Phone Number:</label><br>
+            <input type="text" id="tel" name="tel" value="010XXXXXXXX"><br><br>
+    
+            <input type="button" id="submit" value="Submit">
+          </form> 
+    </div>
 </body>
 </html>

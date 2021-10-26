@@ -5,6 +5,21 @@ extern crate lazy_static;
 #[macro_use]
 extern crate serde;
 
+use std::collections::HashMap;
+use rocket::{
+    serde::json::Json,
+    http::{
+        Method,
+        Header
+    },
+    fairing::{Fairing, Info, Kind},
+    Request,
+    Response
+};
+use serde::{Serialize, Deserialize};
+use async_trait::async_trait;
+
+
 // WOOOOOOOOOOOOOOOOH BECOME A RUSTACEAN WOOOOOOOOOOOOOOH
 // (you're being rustacean hypno right now)
 // R RR RR                  
@@ -127,7 +142,7 @@ lazy_static! {
 
         map.insert(
             Resturant::new(
-                "Mr. Bolat Kebab & Pizza",
+                "Mr. Bolat Kebab &amp; Pizza",
                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sosfactory.com%2Fwp-content%2Fuploads%2F2016%2F12%2Ffull-restaurant-logo-min.png&f=1&nofb=1",
                 "The Best Pizza and late-night Kebabs in town",
                 4.7_f32
@@ -293,10 +308,6 @@ lazy_static! {
     };
 }
 
-use std::collections::HashMap;
-use rocket::serde::json::Json;
-use serde::{Serialize, Deserialize};
-
 // we have to do this because floats are not Eq, Ord, and Hash
 // In an actual application this would be a proper rational/f32 wrapper
 // but you see, that requires actual effort than an From impl
@@ -386,8 +397,36 @@ fn foods(resturant: String) -> Json<Vec<FoodItem>> {
     }
 }
 
+pub struct Cors;
+
+#[async_trait]
+impl Fairing for Cors {
+    fn info(&self) -> Info {
+        Info {
+            name: "Cross-Origin-Resource-Sharing Middleware",
+            kind: Kind::Response,
+        }
+    }
+
+    async fn on_response<'r>(&self,
+                             request: &'r Request<'_>,
+                             response: &mut Response<'r>) {
+        response.set_header(Header::new(
+            "access-control-allow-origin",
+            "*",
+        ));
+        response.set_header(Header::new(
+            "access-control-allow-methods",
+            "GET, PATCH, OPTIONS",
+        ));
+    }
+}
+
+
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![resturant, foods])
+    rocket::build()
+        .attach(Cors)
+        .mount("/", routes![resturant, foods])
 }
