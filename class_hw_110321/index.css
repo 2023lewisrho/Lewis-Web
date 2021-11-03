@@ -1,0 +1,36 @@
+
+.flex-container {
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.flex-item {
+    background-color: white;
+    font-family: serif;
+    margin: 1em;
+    max-width: 30%;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.flex-item > img {
+    width: 100%;
+    height: auto;
+    max-height: 50%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.flex-item > h1 {
+    padding: 1em 1.5em;
+    max-width: 90%;
+}
+
+.flex-item > p {
+    padding: 1em 1.5em;
+    max-width: 90%;
+    font-size: 24px;
+}
