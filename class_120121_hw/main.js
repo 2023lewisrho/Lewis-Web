@@ -3,7 +3,7 @@ function addition(a, b) {
 }
 
 function circle(r) {
-    return r^2 * Math.PI
+    return r * r * Math.PI
 }
 
 function lessThan(a, b) {
