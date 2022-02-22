@@ -113,3 +113,5 @@ Temporary Items
 .apdisk
 
 *.iml
+
+node_modules/
