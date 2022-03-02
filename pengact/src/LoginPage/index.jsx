@@ -44,8 +44,8 @@ const InputButton = styled.input`
     width: 30%;
     height: 6%;
     border-radius: 1em;
-
-`
+    border: none;
+`;
 
 const InputText = styled.p`
     width: 100%;
